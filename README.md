@@ -1,0 +1,2 @@
+# shame-self
+self
