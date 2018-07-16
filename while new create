@@ -1,0 +1,8 @@
+# /usr/bin/python
+# -*- coding: utf-8 -*-
+
+ while i<=10:
+   f=open(r"X:\test%d.py" % i, 'w+')
+   f.write('# /usr/bin/python' '\n' '# -*- coding: utf-8 -*-')
+   i+=1
+f.close()                                       #作为菜鸟的我甚至会忘记close（）
