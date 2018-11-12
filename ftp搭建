@@ -28,3 +28,12 @@ vi /etc/vsftpd.conf
 service vsftpd start##############################################################################重启服务←重要
 history
 #                                                                                    目录权限为755，文件权限为644 chmod 【】 【】
+
+#登录
+lftp 127.0.0.1 
+login user
+PW
+
+#更改编码用于解决中文乱码问题
+set ftp:charset gbk                      ##(或者 gb2312 或 utf-8) ##设置ftp端的编码格式
+set file:charset utf-8                   ##(...同上) ##设置本地编码格式
