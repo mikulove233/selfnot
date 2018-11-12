@@ -1,0 +1,19 @@
+i +n filename ：          打开文件，并将光标置于第n行首。
+vi + filename ：          打开文件，并将光标置于最后一行首。
+vi +/pattern filename：   打开文件，并将光标置于第一个与pattern匹配的串处。
+vi -r filename ：         在上次正用vi编辑时发生系统崩溃，恢复filename。
+vi filename....filename ：打开多个文件，依次进行编辑
+
+vi o/O n  横/竖分屏编辑           #O为分为竖屏 o为分为横屏
+
+
+ctrl+ w + h/j/k/l                #转到左/下/上/右编辑器
+
+
+
+「ctrl」+「b」：屏幕往“后”移动一页。
+「ctrl」+「f」：屏幕往“前”移动一页。
+「ctrl」+「u」：屏幕往“后”移动半页。
+「ctrl」+「d」：屏幕往“前”移动半页。
+
+A：在当前行尾位置开始输入文件；
