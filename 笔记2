@@ -1,0 +1,39 @@
+# /usr/bin/python
+# -*- coding: utf-8 -*-
+
+-b(--block-size=<区块大小>)：                                以指定的区块大小来显示区块数目；
+-h(--human-readable)：                                       以可读性较高的方式来显示信息；
+-H(--si)：                                                   与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；
+-i(--inodes)：                                               显示inode的信息；
+-k(--kilobytes)：                                            指定区块大小为1024字节；
+-l(--local)：                                                仅显示本地端的文件系统；
+-m(--megabytes)：                                            指定区块大小为1048576字节；
+--no-sync：                                                  在取得磁盘使用信息前，不要执行sync指令，此为预设值；
+-P(--portability)：                                          使用POSIX的输出格式；
+--sync：                                                     在取得磁盘使用信息前，先执行sync指令；
+-t                                                          <文件系统类型>或--type=<文件系统类型>：仅显示指定文件系统类型的磁盘信息；
+-T(--print-type)：                                           显示文件系统的类型；
+-x                                                          <文件系统类型>或--exclude-type=<文件系统类型>：不要显示指定文件系统类型的磁盘信息；
+--help：                                                     显示帮助；
+--version：                                                  显示版本信息。
+
+
+mount -参数  -设备  -挂载路径                                挂载
+-V：显示程序版本；
+-l：显示已加载的文件系统列表；
+-h：显示帮助信息并退出；
+-v：冗长模式，输出指令执行的详细信息；
+-n：加载没有写入文件“/etc/mtab”中的文件系统；
+-r：将文件系统加载为只读模式；
+-a：加载文件“/etc/fstab”中描述的所有文件系统
+
+#U盘安装liunx各种系统会遇到CD-rom无法读取
+#解决：挂载ios到本地
+
+1：进入shell交互界面
+2：ls /dev/sd*                                          #寻找u盘的盘符（本地盘为sda1 u盘可能为sbd1
+3：mkdir /ios                                           #根目录创建一个文件夹
+4：mount /dev/sd*  /ios                                 #挂载u盘到/ios
+5：mount /ios/*.ios /cdrom                              #再挂载文件夹到CD-ROM
+6：exit
+#原理就是将u盘挂载到本地盘符，再将本地盘符挂载到cd-rom
