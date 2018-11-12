@@ -1,0 +1,30 @@
+# /usr/bin/python
+# -*- coding: utf-8 -*-
+
+sudo apt-get install vsftpd                                                           #安装ftp
+vsftpd -version                                                                       #查看版本
+
+
+                                                                                      #root配置
+mkdir /home/ftp                                                                       #创建home下ftp目录
+sudo useradd -d /home/ftp -s /bin/bash AliceSoft                                      #创建用户
+passwd AliceSoft                                                                      #PW
+cat etc/passwd
+cd /etc/
+whereis vsftpd.conf                                                                   #ftp匿名配置目录
+vi /etc/vsftpd.conf
+
+
+# Allow anonymous FTP? (Disabled by default).                                         #是否允许匿名用户登录
+  anonymous_enable=NO
+#
+# Uncomment this to allow local users to log in.                                      #是否允许本地用户登录FTP服务器                          
+  local_enable=YES
+#
+# Uncomment this to enable any form of FTP write command.                             #是否允许用户具有在FTP服务器文件中执行写的权限         
+# write_enable=YES
+
+
+service vsftpd start##############################################################################重启服务←重要
+history
+#                                                                                    目录权限为755，文件权限为644 chmod 【】 【】
