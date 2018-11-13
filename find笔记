@@ -18,3 +18,5 @@
  8、find . -perm 700 |xargs chmod 777         //查找出当前目录（及子目录）下所有权限为700的文件，并把其权限重设为777。
 
  9、find . -type f |xargs ls -l              //查找出文件并查看其详细信息。
+ 
+10、find . -name 'flies'| xarge grep -n '*****'
